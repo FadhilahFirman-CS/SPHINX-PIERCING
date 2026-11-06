@@ -1,0 +1,19 @@
+Catatan PR Program Sphinx Piercing:
+
+1. Bagian dashboard perlu dirapikan lagi, terutama alur tampilan 
+untuk guest dan user login.
+2. Detail riwayat pesanan perlu dibuat lebih
+ lengkap dan mudah dibaca.
+3. Bagian metode pembayaran perlu dibuat pop up atau panel 
+yang lebih jelas agar alurnya tidak membingungkan.
+4. Bagian buat janji dan riwayat pesanan perlu disusun ulang 
+supaya punya alur yang masuk akal dan konsisten.
+5. Data produk, profil, dan pesanan sebaiknya disambungkan penuh
+ ke backend supaya tidak bergantung pada hardcode.
+6. Tampilan mobile dan ikon header masih perlu dirapikan agar 
+konsisten di semua halaman customer.
+
+Prioritas pengerjaan:
+- Selesaikan alur dashboard → beli → metode → riwayat.
+- Rapikan detail pesanan serta validasi input.
+- Samakan session customer agar nama profil sesuai username akun.

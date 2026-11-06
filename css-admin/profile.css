@@ -1,0 +1,500 @@
+/* ===== PROFILE ADMIN ===== */
+.profile-page-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* ===== PROFILE CARD ===== */
+.profile-hero {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.profile-hero-banner {
+    height: 90px;
+    background: linear-gradient(135deg, #2d1b69 0%, #5b21b6 50%, #7c3aed 100%);
+    position: relative;
+}
+
+.profile-hero-body {
+    padding: 0 28px 28px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: -40px;
+}
+
+.profile-avatar-wrap {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.profile-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 4px solid var(--bg-card);
+    object-fit: cover;
+    background: linear-gradient(135deg, #7c3aed, #4a9eff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-avatar-edit {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 28px;
+    height: 28px;
+    background: var(--lime);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: #1a1135;
+    cursor: pointer;
+    border: 2px solid var(--bg-card);
+    transition: opacity 0.2s;
+}
+
+.profile-avatar-edit:hover { opacity: 0.85; }
+
+.profile-identity {
+    flex: 1;
+    min-width: 160px;
+    padding-top: 44px;
+}
+
+.profile-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.2;
+}
+
+.profile-role-badge {
+    display: inline-block;
+    background: rgba(127,255,0,0.15);
+    color: var(--lime);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(127,255,0,0.3);
+    margin-top: 6px;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 44px;
+}
+
+.btn-edit-foto {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--bg-card2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 8px;
+    padding: 9px 16px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12.5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.btn-edit-foto:hover {
+    border-color: var(--lime);
+    color: var(--lime);
+}
+
+.btn-unduh {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--bg-card2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 8px;
+    padding: 9px 16px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12.5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.btn-unduh:hover {
+    border-color: #4a9eff;
+    color: #4a9eff;
+}
+
+/* ===== MODAL LAPORAN ===== */
+.laporan-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
+
+.laporan-modal {
+    width: min(840px, 96vw);
+    max-height: 92vh;
+    overflow: auto;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+.laporan-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--border);
+}
+
+.laporan-head h3 {
+    margin: 0;
+    font-size: 16px;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.laporan-head h3 i { color: #4a9eff; }
+
+.laporan-close {
+    border: 1px solid var(--border);
+    background: var(--bg-card2);
+    color: var(--text);
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.laporan-sheet {
+    padding: 18px;
+    background: #fff;
+    color: #0f172a;
+}
+
+.laporan-sheet-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+
+.laporan-brand {
+    font-size: 17px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.laporan-meta {
+    font-size: 12px;
+    color: #475569;
+    margin-top: 4px;
+}
+
+.laporan-period-switch {
+    display: flex;
+    gap: 8px;
+}
+
+.period-btn {
+    border: 1px solid #cbd5e1;
+    background: #f8fafc;
+    color: #334155;
+    border-radius: 8px;
+    padding: 7px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.period-btn.active {
+    background: #0f172a;
+    border-color: #0f172a;
+    color: #fff;
+}
+
+.laporan-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.laporan-table th,
+.laporan-table td {
+    border: 1px solid #e2e8f0;
+    padding: 10px;
+    text-align: left;
+    font-size: 13px;
+}
+
+.laporan-table th {
+    background: #f8fafc;
+    font-weight: 700;
+}
+
+.laporan-summary {
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #0f172a;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.laporan-summary strong {
+    font-size: 18px;
+}
+
+.laporan-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 14px 18px 18px;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+}
+
+.btn-laporan-secondary,
+.btn-laporan-print,
+.btn-laporan-pdf {
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-laporan-secondary {
+    border: 1px solid var(--border);
+    background: var(--bg-card2);
+    color: var(--text);
+}
+
+.btn-laporan-print {
+    border: 1px solid #64748b;
+    background: #64748b;
+    color: #fff;
+}
+
+.btn-laporan-pdf {
+    border: 1px solid #dc2626;
+    background: #dc2626;
+    color: #fff;
+}
+
+/* ===== STATS MINI ===== */
+.profile-stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.pstat-card {
+    background: var(--bg-card2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pstat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    opacity: 0.08;
+}
+
+.pstat-card.jadwal::before   { background: #2ecc71; }
+.pstat-card.customer::before { background: #4a9eff; }
+.pstat-card.produk::before   { background: #7c3aed; }
+.pstat-card.aktifitas::before { background: #e9963e; }
+
+.pstat-icon {
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+.pstat-card.jadwal   .pstat-icon { color: #2ecc71; }
+.pstat-card.customer .pstat-icon { color: #4a9eff; }
+.pstat-card.produk   .pstat-icon { color: #a78bfa; }
+.pstat-card.aktifitas .pstat-icon { color: #e9963e; }
+
+.pstat-trend {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--lime);
+}
+
+.pstat-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.1;
+}
+
+.pstat-label {
+    font-size: 12px;
+    color: var(--text-soft);
+}
+
+/* ===== INFO SECTION ===== */
+.profile-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.info-section-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.info-section-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.info-section-title i { color: var(--lime); }
+
+.info-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-field label {
+    font-size: 11px;
+    color: var(--text-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.info-field input,
+.info-field select {
+    background: var(--bg-card2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 9px 12px;
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    outline: none;
+    transition: border 0.2s;
+    width: 100%;
+}
+
+.info-field input:focus,
+.info-field select:focus {
+    border-color: var(--lime);
+}
+
+.info-field input[readonly] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-save-profile {
+    background: var(--lime);
+    color: #1a1135;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 4px;
+    align-self: flex-start;
+}
+
+.btn-save-profile:hover { opacity: 0.88; }
+
+/* Input file hidden */
+#foto-input { display: none; }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .profile-stats-row { grid-template-columns: repeat(2, 1fr); }
+    .profile-info-grid  { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .profile-stats-row { grid-template-columns: 1fr 1fr; }
+    .profile-hero-body { flex-direction: column; align-items: flex-start; }
+    .profile-actions   { padding-top: 0; }
+    .laporan-actions { justify-content: stretch; }
+    .btn-laporan-secondary,
+    .btn-laporan-print,
+    .btn-laporan-pdf { flex: 1; justify-content: center; }
+}

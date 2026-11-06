@@ -1,0 +1,47 @@
+type User @table {
+  username: String!
+  passwordHash: String!
+  role: String!
+  createdAt: Timestamp!
+  email: String
+  fullName: String
+  phoneNumber: String
+  address: String
+}
+
+type Service @table {
+  name: String!
+  price: Float!
+  durationMinutes: Int!
+  createdAt: Timestamp!
+  description: String
+  imageUrl: String
+}
+
+type Product @table {
+  name: String!
+  price: Float!
+  stockQuantity: Int!
+  createdAt: Timestamp!
+  description: String
+  imageUrl: String
+  category: String
+}
+
+type Appointment @table {
+  user: User!
+  service: Service!
+  appointmentDate: Date!
+  startTime: String!
+  status: String!
+  createdAt: Timestamp!
+  notes: String
+}
+
+type OrderItem @table {
+  product: Product!
+  appointment: Appointment
+  quantity: Int!
+  unitPrice: Float!
+  purchaseDate: Date
+}

@@ -1,0 +1,177 @@
+/* ===== CUSTOMER PAGE ===== */
+.customer-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.customer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.customer-header h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.search-form {
+    display: flex;
+    gap: 8px;
+}
+
+.search-form input {
+    background: var(--bg-main);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 14px;
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    width: 240px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.search-form input::placeholder { color: var(--text-soft); }
+.search-form input:focus { border-color: var(--lime); }
+
+.search-form button {
+    background: var(--lime);
+    color: #1a1135;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.search-form button:hover { opacity: 0.85; }
+
+/* Table */
+.customer-table-wrap { overflow-x: auto; }
+
+table.customer-tbl {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.customer-tbl thead tr {
+    background: var(--bg-card2);
+}
+
+table.customer-tbl th {
+    text-align: left;
+    padding: 11px 16px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-soft);
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+    min-width: 120px;
+}
+
+table.customer-tbl td {
+    padding: 12px 16px;
+    font-size: 13px;
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+    max-width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+table.customer-tbl tbody tr:hover {
+    background: rgba(255,255,255,0.03);
+}
+
+table.customer-tbl tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.btn-detail {
+    background: var(--lime);
+    color: #1a1135;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: opacity 0.2s;
+}
+
+.btn-detail:hover { opacity: 0.85; }
+
+/* Footer: count + pagination */
+.table-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 12px;
+    color: var(--text-soft);
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.pagination a, .pagination span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text-soft);
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+}
+
+.pagination a:hover { background: rgba(255,255,255,0.07); color: var(--text); }
+.pagination span.active { background: var(--lime); color: #1a1135; border-color: var(--lime); }
+.pagination a.disabled { pointer-events: none; opacity: 0.35; }
+
+/* Avatar small */
+.avatar-sm {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7c3aed, #4a9eff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+/* Membership Badges */
+.badge.member-reguler  { background: rgba(150,150,150,0.18); color: #aaa; }
+.badge.member-member   { background: rgba(74,158,255,0.18);  color: #4a9eff; }
+.badge.member-silver   { background: rgba(180,180,200,0.22); color: #b0b8cc; }
+.badge.member-gold     { background: rgba(241,196,15,0.22);  color: #f1c40f; }
+.badge.member-platinum { background: rgba(155,89,182,0.22);  color: #c39bd3; }

@@ -1,0 +1,52 @@
+﻿body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #2c1e4a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 380px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 5px;
+        }
+
+        .zoom-logo {
+            animation: zoomPulse 1.2s ease-in-out forwards;
+        }
+
+        @keyframes zoomPulse {
+            0%   { transform: scale(1); }
+            50%  { transform: scale(1.5); }
+            100% { transform: scale(1); }
+        }
+
+        h1 {
+            color: white;
+            font-size: 32px;
+            margin-bottom: 5px;
+            min-height: 1.2em;
+        }
+
+        p {
+            color: #d0d0e0;
+            font-size: 14px;
+            margin-top: 0;
+            letter-spacing: 1px;
+            min-height: 2.5em;
+        }
+
+

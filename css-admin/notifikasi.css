@@ -1,0 +1,167 @@
+/* ===== NOTIFIKASI PAGE ===== */
+.notif-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.notif-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.notif-card-header h2 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.notif-badge-count {
+    background: var(--lime);
+    color: #1a1135;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 20px;
+}
+
+.notif-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.notif-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: background 0.15s;
+    border-radius: 4px;
+}
+
+.notif-item:last-child {
+    border-bottom: none;
+}
+
+.notif-item:hover {
+    background: rgba(255,255,255,0.03);
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-left: -6px;
+    margin-right: -6px;
+}
+
+.notif-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+/* Icon badge — sesuai status di Kelola Pesanan */
+.notif-icon-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* Biru = Pesanan Baru */
+.notif-icon-badge.baru {
+    background: rgba(74,158,255,0.15);
+    color: #4a9eff;
+}
+/* Orange = Diproses */
+.notif-icon-badge.diproses {
+    background: rgba(233,150,62,0.15);
+    color: #e9963e;
+}
+/* Hijau = Selesai */
+.notif-icon-badge.selesai {
+    background: rgba(46,204,113,0.15);
+    color: #2ecc71;
+}
+/* Merah = Batal */
+.notif-icon-badge.batal {
+    background: rgba(231,76,60,0.15);
+    color: #e74c3c;
+}
+/* Abu = Info / dibaca */
+.notif-icon-badge.info {
+    background: rgba(154,154,176,0.12);
+    color: #6b6b80;
+}
+
+/* Label status kecil di depan pesan */
+.notif-status-label {
+    display: inline-block;
+    font-size: 10.5px;
+    font-weight: 700;
+    padding: 1px 8px;
+    border-radius: 20px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.notif-status-label.baru     { background: rgba(74,158,255,0.18);  color: #4a9eff; }
+.notif-status-label.diproses { background: rgba(233,150,62,0.18);  color: #e9963e; }
+.notif-status-label.selesai  { background: rgba(46,204,113,0.18);  color: #2ecc71; }
+.notif-status-label.batal    { background: rgba(231,76,60,0.18);   color: #e74c3c; }
+.notif-status-label.info     { background: rgba(154,154,176,0.12); color: #9a9ab0; }
+
+.notif-body {
+    flex: 1;
+}
+
+.notif-text {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.5;
+}
+
+.notif-time {
+    font-size: 11px;
+    color: var(--text-soft);
+    margin-top: 3px;
+}
+
+.notif-footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-mark-all {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-soft);
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+}
+
+.btn-mark-all:hover {
+    border-color: var(--lime);
+    color: var(--lime);
+}

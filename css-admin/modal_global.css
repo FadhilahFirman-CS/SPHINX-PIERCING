@@ -1,0 +1,166 @@
+/* ===== GLOBAL MODAL SYSTEM ===== */
+
+/* Overlay */
+.sm-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.70);
+    z-index: 9998;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.sm-overlay.sm-show {
+    display: flex;
+    animation: smFadeIn 0.18s ease;
+}
+
+@keyframes smFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Box */
+.sm-box {
+    background: #1f1542;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 18px;
+    padding: 36px 30px 28px;
+    width: 340px;
+    max-width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    animation: smSlideUp 0.22s ease;
+    font-family: 'Poppins', sans-serif;
+    z-index: 9999;
+}
+
+@keyframes smSlideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* Icon circle */
+.sm-icon-wrap {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    margin-bottom: 6px;
+    border: 3px solid transparent;
+}
+
+.sm-icon-red {
+    background: rgba(231, 76, 60, 0.12);
+    border-color: rgba(231, 76, 60, 0.4);
+    color: #e74c3c;
+}
+
+.sm-icon-green {
+    background: rgba(127, 255, 0, 0.1);
+    border-color: rgba(127, 255, 0, 0.5);
+    color: #7FFF00;
+}
+
+.sm-icon-purple {
+    background: rgba(109, 40, 217, 0.15);
+    border-color: rgba(109, 40, 217, 0.4);
+    color: #a78bfa;
+}
+
+/* Title */
+.sm-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #e8e8f0;
+    margin-top: 2px;
+}
+
+.sm-title.sm-red   { color: #e74c3c; }
+.sm-title.sm-green { color: #7FFF00; }
+
+/* Sub */
+.sm-sub {
+    font-size: 13px;
+    color: #9a9ab0;
+    line-height: 1.6;
+    margin-top: 2px;
+    margin-bottom: 6px;
+}
+
+/* Actions */
+.sm-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.sm-actions.sm-single {
+    grid-template-columns: 1fr;
+}
+
+/* Buttons */
+.sm-btn {
+    border-radius: 9px;
+    padding: 11px 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.18s, transform 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+.sm-btn:hover   { opacity: 0.88; }
+.sm-btn:active  { transform: scale(0.97); }
+
+.sm-btn-outline {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #9a9ab0;
+}
+
+.sm-btn-outline:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    color: #e8e8f0;
+    opacity: 1;
+}
+
+/* Red — Ya Hapus */
+.sm-btn-red {
+    background: #e74c3c;
+    color: #fff;
+}
+
+/* Green — Ok / Berhasil */
+.sm-btn-green {
+    background: #7FFF00;
+    color: #1a1135;
+    font-weight: 700;
+}
+
+/* Purple — Lanjutkan */
+.sm-btn-purple {
+    background: #6d28d9;
+    color: #fff;
+}
+
+/* Warning alert (no icon, inline text) */
+.sm-btn-orange {
+    background: #d97706;
+    color: #fff;
+}

@@ -1,0 +1,147 @@
+/* Unified responsive overrides for admin pages */
+html,
+body,
+.admin-wrapper,
+.admin-main {
+    max-width: 100%;
+}
+
+.admin-main {
+    min-width: 0;
+}
+
+.pesanan-card,
+.produk-card,
+.customer-card,
+.profile-card,
+.chart-box,
+.orders-box,
+.detail-body,
+.notifikasi-card,
+.jadwal-card {
+    min-width: 0;
+}
+
+[class$="-table-wrap"],
+[class*=" table-wrap"],
+.pesanan-table-wrap,
+.customer-table-wrap,
+.produk-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table th,
+table td {
+    white-space: nowrap;
+}
+
+.filter-form,
+.search-form,
+.search-produk,
+.produk-top-actions,
+.pch-controls,
+.table-footer,
+.admin-topbar {
+    flex-wrap: wrap;
+}
+
+.filter-form input,
+.search-form input,
+.search-produk input {
+    width: min(100%, 260px);
+}
+
+.fp-popup,
+.modal-box,
+.konfirm-box {
+    max-width: min(95vw, 520px);
+}
+
+.modal-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 1024px) {
+    .admin-main {
+        padding: 20px 16px !important;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .admin-bottom,
+    .pesanan-layout {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 780px) {
+    .admin-sidebar {
+        width: 68px !important;
+        min-width: 68px !important;
+    }
+
+    .sidebar-logo span,
+    .sidebar-menu li a span,
+    .sidebar-bantuan span,
+    .sidebar-logout span {
+        display: none !important;
+    }
+
+    .sidebar-logo img {
+        width: 42px !important;
+        height: 42px !important;
+    }
+
+    .sidebar-menu li a,
+    .sidebar-bantuan,
+    .sidebar-logout {
+        padding-left: 22px !important;
+        padding-right: 22px !important;
+        justify-content: center;
+    }
+
+    .admin-main {
+        margin-left: 68px !important;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .detail-actions {
+        grid-template-columns: 1fr !important;
+    }
+
+    .modal-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-main {
+        padding: 14px 10px !important;
+    }
+
+    .topbar-title h1 {
+        font-size: 20px;
+    }
+
+    .admin-banner {
+        padding: 12px 14px;
+    }
+
+    .fp-popup {
+        width: calc(100vw - 20px) !important;
+        left: 10px !important;
+        right: 10px !important;
+    }
+
+    .modal-box,
+    .konfirm-box {
+        width: calc(100vw - 20px) !important;
+        padding: 18px 14px !important;
+    }
+}

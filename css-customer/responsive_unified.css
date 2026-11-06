@@ -1,0 +1,174 @@
+/* Unified responsive overrides for customer pages */
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.main-content,
+.app,
+.main,
+.feature-page,
+.promo-card,
+.maps-container,
+.profile-section,
+.checkout-card,
+.checkout-layout {
+    min-width: 0;
+}
+
+.main {
+    width: auto;
+}
+
+[class$="-table-wrap"],
+[class*=" table-wrap"],
+.slot-table-wrap,
+.customer-table-wrap,
+.pesanan-table-wrap,
+.produk-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table,
+.slot-table,
+.customer-tbl,
+.pesanan-tbl,
+.produk-tbl {
+    width: 100%;
+}
+
+.promo-image,
+.service-image {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.product-modal-card,
+.checkout-modal-card,
+.modal-box,
+.modal,
+.modal-card {
+    max-width: min(96vw, 720px);
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        width: 60px !important;
+        padding: 12px 6px !important;
+    }
+
+    .brand,
+    .sidebar-footer {
+        display: none;
+    }
+
+    .menu a {
+        font-size: 0 !important;
+        padding: 10px !important;
+        justify-content: center !important;
+    }
+
+    .menu a i {
+        width: auto !important;
+        font-size: 18px !important;
+    }
+
+    .main {
+        margin-left: 60px !important;
+        padding-inline: 14px !important;
+    }
+
+    .maps-container,
+    .service-block,
+    .contact-buttons {
+        grid-template-columns: 1fr !important;
+        flex-direction: column;
+    }
+
+    .promo-card {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        display: flex !important;
+        position: fixed !important;
+        left: 0;
+        top: var(--header-h, 62px) !important;
+        height: calc(100vh - var(--header-h, 62px)) !important;
+        width: min(82vw, 280px) !important;
+        padding: 18px 14px !important;
+        transform: translateX(-100%) !important;
+        transition: transform 0.3s ease !important;
+        z-index: 200 !important;
+    }
+
+    .sidebar.mobile-open {
+        transform: translateX(0) !important;
+    }
+
+    .sidebar .brand {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar .sidebar-footer {
+        display: block !important;
+    }
+
+    .sidebar .menu a {
+        font-size: 13px !important;
+        padding: 10px 12px !important;
+        justify-content: flex-start !important;
+    }
+
+    .sidebar .menu a i {
+        width: 20px !important;
+        font-size: 16px !important;
+    }
+
+    .main {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 12px 10px !important;
+    }
+
+    .feature-page,
+    .location-info,
+    .promo-card,
+    .product-modal-card {
+        padding: 14px !important;
+    }
+
+    .product-images,
+    .features,
+    .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+    }
+
+    .slot-table {
+        min-width: 320px !important;
+    }
+
+    .cart-dropdown {
+        right: 4px !important;
+        min-width: calc(100vw - 12px) !important;
+    }
+
+    .mobile-sidebar-backdrop {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        z-index: 190;
+    }
+
+    .mobile-sidebar-backdrop.active {
+        display: block;
+    }
+}
